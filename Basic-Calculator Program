@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+   float num1,num2;
+   printf("Enter 1st number :- ");
+   scanf("%f",&num1);
+   printf("\n\nOperator :- \n+ for ADDITION \n- for SUBTRACTION \n* for MULTIPLICATION \n/ for DIVISION");
+   char operand;
+   printf("\nEnter Operator :- ");
+   scanf(" %c",&operand);
+   printf("\nEnter 2nd number :- ");
+   scanf(" %f",&num2);
+    printf("\n\n");
+switch (operand){
+    case '+':
+        printf("SUM of %.2f & %.2f is :- %.3f",num1,num2,num1+num2);
+        break;
+    case '-':
+        printf("SUBTRACTION of %.2f & %.2f is :- %.3f",num1,num2,num1-num2);
+        break;
+    case '*':
+        printf("MULTIPLICATION of %.2f & %.2f is :- %.3f",num1,num2,num1*num2);
+        break;
+    case '/':
+        printf("DIVISION of %.2f & %.2f is :- %.3f",num1,num2,num1/num2);
+        break;
+}
+    return 0;
+}
