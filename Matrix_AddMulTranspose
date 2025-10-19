@@ -1,0 +1,114 @@
+#include <stdio.h>
+int main() {
+     
+    int row,col;
+    printf("Enter number of ROW & COLUMN :- \n");
+    scanf("%d",&row);
+    scanf("%d",&col);
+    int matrixA[row][col],matrixB[row][col];
+   
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            printf("Enter Element [%d %d] of MatrixA :- ",i+1,j+1);
+            scanf("%d",&matrixA[i][j]);
+        }
+    }
+    
+    printf("\n\n");
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            printf("Enter Element [%d %d] of MatrixB :- ",i+1,j+1);
+            scanf("%d",&matrixB[i][j]);
+        }
+    }
+    // Addition code
+    int matrixC[row][col];
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            matrixC[i][j]=matrixA[i][j]+matrixB[i][j];
+        }
+    }
+    
+    //Transpose code
+    int matrixD[row][col];
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            matrixD[i][j] = matrixA[j][i];
+        }
+    }
+    int matrixE[row][col];
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            matrixE[i][j] = matrixB[j][i];
+        }
+    }
+    // Multiplication Code
+    int matrixF[row][col];
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            matrixF[i][j] = 0;
+
+            for (int k = 0; k < row; k++) {
+                matrixF[i][j] += matrixA[i][k] * matrixB[k][j];
+            }
+        }
+    }
+    
+    printf("\n");
+    printf("MatrixA :- ");
+    printf("\n");
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            printf("%d ",matrixA[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    printf("MatrixB :- ");
+    printf("\n");
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            printf("%d ",matrixB[i][j]);
+        }
+        printf("\n");
+    }   
+    printf("\n");  
+    printf("MatrixC :- Addition of MatrixA & MatrixB");
+    printf("\n");
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            printf("%d ",matrixC[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    printf("MatrixF :- Multiplication of MatrixA & MatrixB");
+    printf("\n");
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            printf("%d ",matrixF[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    printf("MatrixD :- Transpose of MatrixA");
+    printf("\n");
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            printf("%d ",matrixD[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    printf("MatrixE :- Transpose of MatrixB");
+    printf("\n");
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            printf("%d ",matrixE[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    
+    return 0;
+}
